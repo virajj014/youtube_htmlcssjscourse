@@ -10,7 +10,7 @@
 
 body{
     position: relative;
-    background: #f0f0f0;
+    background: #ffffff;
     font-family: 'roboto', sans-serif;
 }
 
@@ -61,22 +61,28 @@ body{
     width: 50%;
     height: 35px;
     display: flex;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #dbdbdb;
+
 }
 
 .search-bar{
     width: 85%;
     height: 100%;
-    border: 2px solid #dbdbdb;
     padding: 0 20px;
     font-size: 16px;
     text-transform: capitalize;
+    border: none;
+
 }
 
 .search-btn{
     width: 15%;
     height: 100%;
     background: #f0f0f0;
-    border: 2px solid #dbdbdb;
+    border: none;
     padding: 5px 0;
     border-left: none;
 }
@@ -111,6 +117,8 @@ body{
     height: 100%;
     object-fit: cover;
 }
+
+
 
 /* side-bar */
 
@@ -244,4 +252,33 @@ body{
     font-size: 14px;
     margin: 2px 0;
     color: #979797;
+}
+.views-time {
+    font-size: 14px;
+    color: gray;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframe for spinner rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
